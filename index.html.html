@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З Новим роком!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a44 0%, #2d4263 100%);
+            color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1em;
+            animation: fall linear infinite;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .container {
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #e8e8e8;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .final-wish {
+            margin-top: 35px;
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #ffd700;
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .links a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .final-wish {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>З Новим роком!</h1>
+        
+        <p>
+            Дорогі друзі! Щиро вітаємо вас із Новим роком! Нехай це свято принесе у ваші домівки тепло, затишок і радість.
+        </p>
+
+        <p>
+            Цей рік був особливо складним для всіх нас. Рашиська країна продовжує свою агресію проти України, але ми не здаємося. Ми стоїмо. Ми віримо. Ми тримаємося разом.
+        </p>
+
+        <p>
+            Навіть у найтемніші часи важливо <span class="highlight">не втрачати духу і надії</span>. Саме вони дають нам силу йти далі, підтримувати одне одного і вірити у перемогу. Наша єдність — це наша найбільша сила.
+        </p>
+
+        <p>
+            Ми пишаємося кожним українцем, кожною українкою — тими, хто захищає нашу землю, хто допомагає, хто працює, хто вірить. Разом ми непереможні.
+        </p>
+
+        <div class="final-wish">
+            Бажаємо вам миру, здоров'я, тепла і світла у новому році.<br>
+            Хай 2026-й стане роком перемоги, відбудови та щастя!<br><br>
+            Слава Україні! 🇺🇦
+        </div>
+
+        <div class="footer">
+            з коханням, гравці BROGGUA
+            <div class="links">
+                <a href="https://discord.gg/Y9v9zyeJ" target="_blank">Discord</a>
+                <span style="color: rgba(255, 255, 255, 0.3);">•</span>
+                <a href="https://www.twitch.tv/brozoratv" target="_blank">Twitch</a>
+                <span style="color: rgba(255, 255, 255, 0.3);">•</span>
+                <a href="https://www.youtube.com/@brozoratv" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = Math.random() * 3 + 5 + 's';
+            snowflake.style.opacity = Math.random() * 0.6 + 0.3;
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        setInterval(createSnowflake, 300);
+    </script>
+</body>
+</html>
